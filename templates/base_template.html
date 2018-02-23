@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<head>
+		{% block head %}
+		<meta charset="utf-8">
+		<meta name="author" content="Kyle Lick">
+		<!--Make sure stuff scales on mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--Initialize bootstrap-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<!--Load global stylesheet-->
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<title>Some kind of web game</title>
+		{% endblock %}
+    </head>
+    <body>
+    	<!--Navbar-->
+    	<div id="navigation_bar">{% block navigation_bar %}
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 text-left">
+						<p id="app-title">Some kind of game</p>
+					</div>
+					<div class="col-md-3">
+					</div>
+					<div class="col-md-6">
+						<!--TODO: Put links to login and out-->
+						<p class="text-right"><a href="">Login here</a></p>
+						<p class="text-right"><a href="">Log Out</a></p>
+					</div>
+				</div>
+			</div>
+		{% endblock %}</div>
+		<!--End navbar-->
+    </body>
+</html>

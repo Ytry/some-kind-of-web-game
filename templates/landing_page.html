@@ -1,37 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base_template.html" %}
+<!doctype html>
+<html>
 	<head>
-		<meta charset="utf-8">
-		<meta name="author" content="Kyle Lick">
-		<!--Make sure stuff scales on mobile-->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!--Initialize bootstrap-->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<title>Some kind of web game</title>
+		{% block head %}
+		{{ super() }}
+		{% endblock %}
 	</head>
 	<body>
-		<!--Navbar-->
-		<div id="navigation_bar">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3 text-left">
-						<p id="app-title">Some kind of game</p>
-					</div>
-					<div class="col-md-3">
-					</div>
-					<div class="col-md-6">
-						<!--TODO: Put links to login and out-->
-						<p class="text-right"><a href="">Login here</a></p>
-						<p class="text-right"><a href="">Log Out</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--End navbar-->
-		<div class="container">
-			<p> for now there isn't much here, but one day it will be a landing page </p>
-		</div>
+		{% block navigation_bar %}
+		{{ super() }}
+		{% endblock %}
 	</body>
 </html>

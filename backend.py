@@ -8,6 +8,11 @@ def showLanding():
 
     return render_template('landing_page.html')
 
+@app.route('/login')
+def login():
+    
+    return render_template('login.html')
+
 if __name__ == '__main__':
     app.secret_key = 'super_secret_key'
     app.debug = True
